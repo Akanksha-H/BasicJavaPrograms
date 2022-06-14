@@ -5,23 +5,20 @@ import java.lang.Math;
 
 public class BasicCorePrograms {
     public static void main(String[] args) {
-        primFactors();
+        quotientAndRemainder();
     }
 
-    static void primFactors() {
-        int number;
+    static void quotientAndRemainder() {
+        System.out.println("Enter the value of dividend");
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number :");
-        number = sc.nextInt();
+        int dividend = sc.nextInt();
+        System.out.println("Enter the value of divisor");
+        int divisor = sc.nextInt();
 
-        for (int i = 2; i < number; i++) {
-            while (number % i == 0) {
-                System.out.println(i + " ");
-                number = number / i;
-            }
-        }
-        if (number > 2) {
-            System.out.println(number);
-        }
+        int quotient = dividend / divisor;
+        int remainder = dividend % divisor;
+
+        System.out.println("Quotient of entered number is = " + quotient);
+        System.out.println("Remainder of entered number is = " + remainder);
     }
 }
