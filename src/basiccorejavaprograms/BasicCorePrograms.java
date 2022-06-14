@@ -5,18 +5,17 @@ import java.lang.Math;
 
 public class BasicCorePrograms {
     public static void main(String[] args) {
-        evenOddNumber();
+        vowelOrConstant();
     }
 
-    static void evenOddNumber(){
+    static void vowelOrConstant(){
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a alphabet: ");
+        char ch=sc.next( ).charAt(0);
 
-        System.out.print("Enter a number: ");
-        int number = sc.nextInt();
-
-        if(number % 2 == 0)
-            System.out.println(number + " is even");
+        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' )
+            System.out.println(ch + " is vowel");
         else
-            System.out.println(number + " is odd");
+            System.out.println(ch + " is consonant");
     }
 }
