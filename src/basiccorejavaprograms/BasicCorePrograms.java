@@ -1,21 +1,26 @@
 package basiccorejavaprograms;
 
 import java.util.Scanner;
-import java.lang.Math;
 
 public class BasicCorePrograms {
     public static void main(String[] args) {
-        vowelOrConstant();
+        largestNumber();
     }
 
-    static void vowelOrConstant(){
+    static void largestNumber(){
+        System.out.print("Enter a number: ");
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a alphabet: ");
-        char ch=sc.next( ).charAt(0);
+        int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
+        int n3 = sc.nextInt();
 
-        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' )
-            System.out.println(ch + " is vowel");
+        if( n1 >= n2 && n1 >= n3)
+            System.out.println(n1 + " is the largest number.");
+
+        else if (n2 >= n1 && n2 >= n3)
+            System.out.println(n2 + " is the largest number.");
+
         else
-            System.out.println(ch + " is consonant");
+            System.out.println(n3 + " is the largest number.");
     }
 }
