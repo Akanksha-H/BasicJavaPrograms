@@ -5,20 +5,25 @@ import java.lang.Math;
 
 public class BasicCorePrograms {
     public static void main(String[] args) {
-        quotientAndRemainder();
+        swapTwoNumbers();
     }
 
-    static void quotientAndRemainder() {
-        System.out.println("Enter the value of dividend");
+    static void swapTwoNumbers() {
+        System.out.println("Enter the value of first number");
         Scanner sc = new Scanner(System.in);
-        int dividend = sc.nextInt();
-        System.out.println("Enter the value of divisor");
-        int divisor = sc.nextInt();
+        int first = sc.nextInt();
+        System.out.println("Enter the value of second number");
+        int second  = sc.nextInt();
+        System.out.println("Numbers before swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
 
-        int quotient = dividend / divisor;
-        int remainder = dividend % divisor;
+        int temp = first;
+        first = second;
+        second = temp;
 
-        System.out.println("Quotient of entered number is = " + quotient);
-        System.out.println("Remainder of entered number is = " + remainder);
+        System.out.println("Numbers after swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
     }
 }
