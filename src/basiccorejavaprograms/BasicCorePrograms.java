@@ -5,22 +5,21 @@ import java.lang.Math;
 
 public class BasicCorePrograms {
     public static void main(String[] args) {
-        powerOfTwo();
+        harmonicNumber();
     }
 
-    static void powerOfTwo() {
+    static double harmonicNumber() {
+        float harmonic = 1;
         System.out.println("Enter the value of number");
         Scanner sc = new Scanner(System.in);
-        double power = sc.nextInt();
+        int number = sc.nextInt();
 
-        if (power > 31) {
-            System.out.println("Please enter value less than 31");
-            return;
+        // loop to apply the formula
+        // Hn = H1 + H2 + H3 ... + Hn-1 + Hn-1 + 1/n
+        for (int i = 2; i <= number; i++) {
+            harmonic += (float) 1 / i;
+            System.out.println("Value of harmonic number: " + harmonic);
         }
-
-        for (int i = 1; i <= power; i++) {
-            double number = 2;
-            System.out.println("Value of 2 poer of enterd value is:" + Math.pow(number, i));
-        }
+        return harmonic;
     }
 }
