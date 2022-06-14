@@ -5,25 +5,18 @@ import java.lang.Math;
 
 public class BasicCorePrograms {
     public static void main(String[] args) {
-        swapTwoNumbers();
+        evenOddNumber();
     }
 
-    static void swapTwoNumbers() {
-        System.out.println("Enter the value of first number");
+    static void evenOddNumber(){
         Scanner sc = new Scanner(System.in);
-        int first = sc.nextInt();
-        System.out.println("Enter the value of second number");
-        int second  = sc.nextInt();
-        System.out.println("Numbers before swap--");
-        System.out.println("First number = " + first);
-        System.out.println("Second number = " + second);
 
-        int temp = first;
-        first = second;
-        second = temp;
+        System.out.print("Enter a number: ");
+        int number = sc.nextInt();
 
-        System.out.println("Numbers after swap--");
-        System.out.println("First number = " + first);
-        System.out.println("Second number = " + second);
+        if(number % 2 == 0)
+            System.out.println(number + " is even");
+        else
+            System.out.println(number + " is odd");
     }
 }
