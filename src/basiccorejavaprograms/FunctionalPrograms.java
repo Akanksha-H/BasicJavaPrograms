@@ -4,24 +4,11 @@ import java.util.Scanner;
 
 public class FunctionalPrograms {
     public static void main(String[] args) {
-        findTriplets();
+        distanceBetweenTwoPoints(2,2);
     }
 
-    static void findTriplets(int n,int[] arr ) {
-        boolean found = false;
-        for (int i = 0; i < n - 2; i++) {
-            for (int j = i + 1; j < n - 1; j++) {
-                for (int k = j + 1; k < n; k++) {
-                    if (arr[i] + arr[j] + arr[k] == 0) {
-                        System.out.println(arr[i] + " " + arr[j] + " " + arr[k]);
-                        found = true;
-                    }
-                }
-            }
-        }
-
-        // If no triplet with 0 sum found in array
-        if (found == false)
-            System.out.println(" not exist ");
+    static void distanceBetweenTwoPoints(double x, double y) {
+        double distance = Math.sqrt((x * x + y * y));
+        System.out.println("Distance between two pont is :" + distance);
     }
 }
