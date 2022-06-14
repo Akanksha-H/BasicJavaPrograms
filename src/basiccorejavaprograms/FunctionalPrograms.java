@@ -4,25 +4,24 @@ import java.util.Scanner;
 
 public class FunctionalPrograms {
     public static void main(String[] args) {
-        twoDArray();
+        findTriplets();
     }
 
-    static void twoDArray() {
-        System.out.print("Enter number of columns: ");
-        Scanner sc = new Scanner(System.in);
-        int m = sc.nextInt();
-        System.out.print("Enter number of rows: ");
-        int n = sc.nextInt();
-        boolean[][] booleans;
-        booleans = new boolean[n][m];
-        System.out.println("booleans[0][0] : " + booleans);
-        int[][] ints = new int[n][m];
-        System.out.println("ints[0][0] : " + ints);
-        long[][] longs = new long[n][m];
-        System.out.println("longs[0][0] : " + longs);
-        float[][] floats = new float[n][m];
-        System.out.println("floats[0][0] : " + floats);
-        double[][] doubles = new double[n][m];
-        System.out.println("doubles[0][0] : " + doubles);
+    static void findTriplets(int n,int[] arr ) {
+        boolean found = false;
+        for (int i = 0; i < n - 2; i++) {
+            for (int j = i + 1; j < n - 1; j++) {
+                for (int k = j + 1; k < n; k++) {
+                    if (arr[i] + arr[j] + arr[k] == 0) {
+                        System.out.println(arr[i] + " " + arr[j] + " " + arr[k]);
+                        found = true;
+                    }
+                }
+            }
+        }
+
+        // If no triplet with 0 sum found in array
+        if (found == false)
+            System.out.println(" not exist ");
     }
 }
